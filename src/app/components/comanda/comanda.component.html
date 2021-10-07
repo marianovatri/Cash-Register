@@ -1,0 +1,13 @@
+<h3>Carrito de compras</h3>
+<div class="barra">
+    <p>TOTAL: {{total()}}</p>
+  
+</div>
+
+
+<div class="productos">
+    <div class="producto" *ngFor="let producto of arrayProductos; let indice = index"
+    (click)="onClickBorrar(indice)">
+        <p class="color" >{{producto.nombre}} x {{producto.cantidad}} - ${{producto.precio * producto.cantidad}}</p>
+    </div>
+</div>
